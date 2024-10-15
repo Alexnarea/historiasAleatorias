@@ -1,0 +1,1 @@
+/*boton que genere la historia*/

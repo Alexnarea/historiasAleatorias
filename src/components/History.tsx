@@ -1,0 +1,2 @@
+/*mostrar la historia generada
+buton*/
