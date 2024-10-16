@@ -1,1 +1,0 @@
-/*seleccion de personajes y EventSource*/
