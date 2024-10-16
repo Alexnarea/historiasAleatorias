@@ -19,12 +19,12 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
     <div>
       <h3>Ingresa los detalles de tu historia</h3>
       <label>
-        Character Name:
+        Personaje:
         <input
           type="text"
           value={character}
           onChange={(e) => setCharacter(e.target.value)}
-          placeholder="Enter character name"
+          placeholder="Ingrese un personaje"
         />
       </label>
       <br />
