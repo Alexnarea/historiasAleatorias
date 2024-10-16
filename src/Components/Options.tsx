@@ -11,13 +11,13 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
   const [type, setType] = useState('');
 
   const handleGenerate = () => {
-    // Llamar a la función de generación con los valores ingresados
+    
     onGenerate(character, place, occasion, type);
   };
 
   return (
     <div>
-      <h3>Enter the details for your story</h3>
+      <h3>Ingresa los detalles de tu historia</h3>
       <label>
         Character Name:
         <input
@@ -51,7 +51,7 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
       <label>
         Type of Story:
         <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="">Select a type</option>
+          <option value="">Select a type history</option>
           <option value="Romance">Romance</option>
           <option value="Action">Action</option>
           <option value="Comedy">Comedy</option>

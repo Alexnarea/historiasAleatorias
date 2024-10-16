@@ -5,7 +5,7 @@ interface ButtonGenerateHistoryProps {
 }
 
 const ButtonGenerateHistory: React.FC<ButtonGenerateHistoryProps> = ({ onClick }) => {
-  return <button onClick={onClick}>Generate Story</button>;
+  return <button onClick={onClick}>Generate</button>;
 };
 
 export default ButtonGenerateHistory;

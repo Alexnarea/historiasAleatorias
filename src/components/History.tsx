@@ -8,12 +8,12 @@ interface HistoryProps {
 }
 
 const History: React.FC<HistoryProps> = ({ character, place, occasion, type }) => {
-  return (
+return (
     <div>
-      <h2>Generador tu historia aleatoria</h2>
-      <p>{`${character} went to ${place} for ${occasion}. It turned out to be a ${type} story!`}</p>
+    <h2>Maria conchita de las 4 lomas y el perro infiel</h2>
+    <p>{`${character} went to ${place} for ${occasion}. It turned out to be a ${type} story!`}</p>
     </div>
-  );
+);
 };
 
 export default History;
