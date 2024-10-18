@@ -6,6 +6,7 @@ const OpcionesPage: React.FC = () => {
   const [characters] = useState<string[]>(['Un caballero', 'Un dragón']);
   const [scenarios] = useState<string[]>(['un castillo', 'un bosque encantado']);
   const [events] = useState<string[]>(['rescata a alguien', 'encuentra un tesoro']);
+  const {type} = useState<string[]>(['Comedia`, `]);
 
 
   const [character, setCharacter] = useState<string>('');
