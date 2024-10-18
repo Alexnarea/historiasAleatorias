@@ -1,11 +1,12 @@
 import React from 'react';
 
-interface ButtonGenerateHistoryProps {
+interface ButtonProps {
   onClick: () => void;
+  label: string;
 }
 
-const ButtonGenerateHistory: React.FC<ButtonGenerateHistoryProps> = ({ onClick }) => {
-  return <button onClick={onClick}>Generate</button>;
+const Button: React.FC<ButtonProps> = ({ onClick, label}) => {
+  return <button onClick={onClick}>{label}</button>;
 };
 
-export default ButtonGenerateHistory;
+export default Button;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from './ButtonGenerateHistory';
 
 interface OptionsProps {
   onGenerate: (character: string, place: string, occasion: string, type: string) => void;
@@ -49,9 +50,9 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
       </label>
       <br />
       <label>
-        Type of Story:
+        Tipo de historia:
         <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="">Select a type history</option>
+          <option value="">Seleccione un tipo para su historia</option>
           <option value="Romance">Romance</option>
           <option value="Action">Action</option>
           <option value="Comedy">Comedy</option>
@@ -59,7 +60,7 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
         </select>
       </label>
       <br />
-      <button onClick={handleGenerate}>Generate</button>
+      <Button onClick={handleGenerate} label="Generate" />
     </div>
   );
 };

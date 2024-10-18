@@ -22,5 +22,4 @@ const HistoryPage: React.FC = () => {
     </div>
   );
 };
-
 export default HistoryPage;
