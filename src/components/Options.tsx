@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import Button from './ButtonGenerateHistory';
 
 interface OptionsProps {
-  onGenerate: (character: string, place: string, occasion: string, type: string) => void;
+  onGenerate: (character: string, scenario: string, event: string, type: string) => void;
 }
 
 const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
   const [character, setCharacter] = useState('');
-  const [place, setPlace] = useState('');
-  const [occasion, setOccasion] = useState('');
+  const [scenario, setScenario] = useState('');
+  const [event, setEvent] = useState('');
   const [type, setType] = useState('');
 
   const handleGenerate = () => {
     
-    onGenerate(character, place, occasion, type);
+    onGenerate(character, scenario, event, type);
   };
 
   return (
@@ -33,8 +33,8 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
         Escenario:
         <input
           type="text"
-          value={place}
-          onChange={(e) => setPlace(e.target.value)}
+          value={scenario}
+          onChange={(e) => setScenario(e.target.value)}
           placeholder="Ingrese un escenario"
         />
       </label>
@@ -43,8 +43,8 @@ const Options: React.FC<OptionsProps> = ({ onGenerate }) => {
         Evento:
         <input
           type="text"
-          value={occasion}
-          onChange={(e) => setOccasion(e.target.value)}
+          value={event}
+          onChange={(e) => setEvent(e.target.value)}
           placeholder="Ingrese un evento"
         />
       </label>
