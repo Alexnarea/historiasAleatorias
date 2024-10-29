@@ -1,9 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
 .footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+    
     padding: 1rem;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo, .footer-related, .footer-contact, .footer-social {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-logo .logo {
+    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-bottom: 1rem;
+}
+
+.footer-related ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-related ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-contact p {
+    margin: 0.3rem 0;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icons img {
+    width: 24px; /* Tamaño de los iconos de redes sociales */
+    height: 24px;
+    filter: invert(1); /* Cambia los iconos a blanco para que contrasten con el fondo oscuro */
 }
