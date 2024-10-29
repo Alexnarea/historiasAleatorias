@@ -1,8 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-
 
 .footer {
     background-color: #000;
@@ -12,11 +14,10 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: left;
-    
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
 }
 
 .footer-section {
@@ -33,7 +34,7 @@ body {
 }
 
 .footer-logo .logo {
-    width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+    width: 150px;
     margin-bottom: 1rem;
 }
 
@@ -56,7 +57,35 @@ body {
 }
 
 .footer-social .social-icons img {
-    width: 24px; /* Tamaño de los iconos de redes sociales */
+    width: 24px;
     height: 24px;
-    filter: invert(1); /* Cambia los iconos a blanco para que contrasten con el fondo oscuro */
+    filter: invert(1);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-related, .footer-contact, .footer-social {
+        flex: none;
+        margin: 0.5rem 0;
+        text-align: center;
+    }
+}
+
+/* Asegura que el pie de página se quede al final de la página */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed
 }
