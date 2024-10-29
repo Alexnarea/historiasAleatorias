@@ -1,4 +1,6 @@
 import React from 'react';
+import './History.css'
+
 
 interface HistoryProps {
   character: string;
@@ -9,10 +11,10 @@ interface HistoryProps {
 
 const History: React.FC<HistoryProps> = ({ character, scenario, event, type}) => {
   if (!character || !scenario || !event || !type) {
-    return <p>Selecciona todos los elementos para generar una historia.</p>;
+    return <p className='texto'>Selecciona todos los elementos para generar una historia.</p>;
   }
 return (
-  <div>
+  <div className='container'>
     <p>{`Esta es una historia de tipo: ${type}`}</p>
     <p>{`Habia una vez ${character} que vivia en  ${scenario} y un dia ${event}.`}</p>
   </div>
