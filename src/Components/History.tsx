@@ -11,11 +11,7 @@ interface HistoryProps {
 
 const History: React.FC<HistoryProps> = ({ character, scenario, event, type}) => {
   if (!character || !scenario || !event || !type) {
-<<<<<<< Updated upstream
     return <p className='texto'>Selecciona todos los elementos para generar una historia.</p>;
-=======
-    return <p>Selecciona todos los elementos para generar una historia.</p>;
->>>>>>> Stashed changes
   }
 return (
   <div className='container'>
