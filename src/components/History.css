@@ -1,6 +1,6 @@
 .container{
-    color: blue;
-    width: 200px;
-    height: 200px;
-    border-radius: 2px black solid;
+    background-color: rgb(187, 241, 241);
+    border: solid 2px rgb(4, 137, 146);
+    padding: 20px;
+    margin: 20px;
 }
