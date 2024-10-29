@@ -1,12 +1,10 @@
 import React from 'react';
 import HistoryPage from './pages/HistoryPage'; 
-import './App.css'
-
 
 const App: React.FC = () => {
   return (
-    <div className='container'>
-      <HistoryPage />
+    <div>
+      <HistoryPage /> {/* Renderiza la página de generación de historias */}
     </div>
   );
 };
