@@ -6,38 +6,41 @@ const Footer: React.FC = () => {
         <footer className="footer">
             <div className="footer-section">
                 <div className="footer-logo">
-                    <img src="/path/to/logo.png" alt="Logo" className="logo" />
-                    <p>Nam accumsan metus tortorujnjnjgfdcsxxdcfgvbhnjmnhbgvf.</p>
+                    <img 
+                        src="https://png.pngtree.com/png-vector/20240515/ourmid/pngtree-open-book-logo-png-image_12467719.png" 
+                        alt="Logo" 
+                        className="logo" 
+                    />
+                    <div className="footer-logo-text">
+                        <p>EdiAleX</p>
+                        <p>Generador de Historias Aleatorias</p>
+                    </div>
                 </div>
                 <div className="footer-related">
-                    <h3>Temas relacionados</h3>
+                    <h3>Integrantes</h3>
                     <ul>
-                        <li>Tema 1</li>
-                        <li>Tema 2</li>
-                        <li>Tema 3</li>
+                        <li>Alexis Narea</li>
+                        <li>Edisson Mendez</li>
+                        <li>Alejandra Medranda</li>
                     </ul>
-                </div>
-                <div className="footer-contact">
-                    <h3>Datos del grupo</h3>
-                    <p>holiiii.mena@gmail.com</p>
-                    <p>0 87654321</p>
-                    <p>parque sanblas - Pueblo Libre</p>
-                    <p>Ecuador-Cuenca</p>
                 </div>
                 <div className="footer-social">
                     <h3>Redes Sociales</h3>
                     <div className="social-icons">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/path/to/facebook-icon.png" alt="Facebook" /> //src/assets/icons/
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/path/to/twitter-icon.png" alt="Twitter" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="Twitter" />
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                            <img src="/path/to/instagram-icon.png" alt="Instagram" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
                         </a>
                     </div>
                 </div>
+            </div>
+            <div className="footer-year">
+                © 2007-2024 Instituto Tecnológico Sudamericano
             </div>
         </footer>
     );
