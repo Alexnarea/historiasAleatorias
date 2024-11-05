@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="footer-year">
-                © 2007-2024 Instituto Tecnológico Sudamericano
+                © 2024-2025 Instituto Tecnológico Sudamericano
             </div>
         </footer>
     );
