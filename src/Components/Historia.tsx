@@ -1,20 +1,9 @@
-import React from "react";
-
 interface Props {
-  character: string;
-  location: string;
-  event: string;
+  story: string;
 }
 
-const Historia: React.FC<Props> = ({ character, location, event }) => {
-  return (
-    <div>
-      <h3>Historia Generada</h3>
-      <p>
-        {`Había una vez un ${character} que estaba en ${location} y de repente ${event}.`}
-      </p>
-    </div>
-  );
+const Historia: React.FC<Props> = ({ story }) => {
+  return <p>{story || "Tu historia aparecerá aquí"}</p>;
 };
 
 export default Historia;

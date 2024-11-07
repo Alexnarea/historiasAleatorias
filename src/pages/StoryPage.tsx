@@ -1,35 +1,39 @@
 import React, { useState } from "react";
-import CharacterSelector from "../components/CharacterSelector";
-import LocationSelector from "../components/LocationSelector";
-import EventSelector from "../components/EventSelector";
-import StoryDisplay from "../components/StoryDisplay";
-import GenerateButton from "../components/GenerateButton";
+import CharacterSelector from "../Components/CharacterSelector";
+import LocationSelector from "../Components/LocationSelector";
+import EventSelector from "../Components/EventSelector";
+import Historia from "../Components/Historia";
+import GenerateButton from "../Components/GenerateButton";
 
 const StoryPage: React.FC = () => {
-const [character, setCharacter] = useState<string>("Personaje desconocido");
-const [location, setLocation] = useState<string>("Lugar desconocido");
-const [event, setEvent] = useState<string>("Evento inesperado");
+  // Estados para cada selector
+  const [character, setCharacter] = useState<string>("Selecciona un personaje");
+  const [location, setLocation] = useState<string>("Selecciona un lugar");
+  const [event, setEvent] = useState<string>("Selecciona un evento");
 
-const generateStory = () => {
-    const characters = ["Héroe", "Villano", "Detective"];
-    const locations = ["Castillo encantado", "Bosque oscuro", "Espacio exterior"];
-    const events = ["Encuentra un tesoro", "Lucha contra un dragón", "Descubre un misterio"];
+  // Estado para la historia generada
+  const [story, setStory] = useState<string>("");
 
-    setCharacter(characters[Math.floor(Math.random() * characters.length)]);
-    setLocation(locations[Math.floor(Math.random() * locations.length)]);
-    setEvent(events[Math.floor(Math.random() * events.length)]);
-};
+  const generateStory = () => {
+    setStory(`${character} se encuentra en ${location} y ${event.toLowerCase()}.`);
+  };
 
-return (
+  return (
     <div style={{ textAlign: "center", marginTop: "20px" }}>
-    <h1>Tu Historia</h1>
-    <CharacterSelector character={character} />
-    <LocationSelector location={location} />
-    <EventSelector event={event} />
-    <StoryDisplay character={character} location={location} event={event} /> 
-    <GenerateButton onClick={generateStory} />
+      <h1>Generador de Historias</h1>
+      
+      {/* Componentes para seleccionar opciones */}
+      <CharacterSelector selected={character} onSelect={setCharacter} />
+      <LocationSelector selected={location} onSelect={setLocation} />
+      <EventSelector selected={event} onSelect={setEvent} />
+      
+      {/* Mostrar la historia generada */}
+      <Historia story={story} />
+      
+      {/* Botón para generar la historia */}
+      <GenerateButton onClick={generateStory} />
     </div>
-);
+  );
 };
 
 export default StoryPage;
