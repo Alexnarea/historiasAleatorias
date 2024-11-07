@@ -6,7 +6,7 @@ interface CharacterSelectorProps {
 }
 
 const CharacterSelector: React.FC<CharacterSelectorProps> = ({ selected, onSelect }) => {
-  const characters = ["Héroe", "Villano", "Detective"];
+  const characters = ["Héroe", "Villano", "Detective", "Pollito", "Enano"];
 
   return (
     <div>

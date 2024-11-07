@@ -4,7 +4,7 @@ interface Props {
 }
 
 const LocationSelector: React.FC<Props> = ({ selected, onSelect }) => {
-  const locations = ["Castillo encantado", "Bosque oscuro", "Espacio exterior"];
+  const locations = ["Castillo encantado", "Bosque oscuro", "Espacio exterior", "Espacio", "Bosque Encantado"];
 
   return (
     <div>

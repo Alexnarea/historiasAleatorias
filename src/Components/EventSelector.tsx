@@ -12,6 +12,7 @@ const EventSelector: React.FC<EventSelectorProps> = ({ selected, onSelect }) => 
     "Descubre un misterio",
     "Viaja en el tiempo",
     "Se une a una misión secreta",
+    "Se enamora",
   ];
 
   return (
