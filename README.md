@@ -173,8 +173,52 @@ Renderiza selectores para cada elemento de la historia.
 Muestra varios componentes independientes en un contenedor.
 **¿Por qué es la mejor forma?**
 Modulariza la lógica, haciendo que el código sea más mantenible.
-    - **Mantener componentes puros**: Asegurarse de que los componentes de historia no modifiquen el estado directamente.
-    - **Entender la UI como árboles**: Organizar los elementos de la historia, los personajes y los escenarios de manera jerárquica.
+ - **Mantener componentes puros**: Asegurarse de que los componentes de historia no modifiquen el estado directamente.
+- **Entender la UI como árboles**: Organizar los elementos de la historia, los personajes y los escenarios de manera jerárquica.
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import CharacterSelector from "../Components/CharacterSelector";
+import LocationSelector from "../Components/LocationSelector";
+import EventSelector from "../Components/EventSelector";
+
+const Home: React.FC = () => {
+  const [selectedCharacter, setSelectedCharacter] = useState<string>("Personaje desconocido");
+  const [selectedLocation, setSelectedLocation] = useState<string>("Lugar desconocido");
+  const [selectedEvent, setSelectedEvent] = useState<string>("Evento inesperado");
+
+  const navigate = useNavigate();
+
+  const handleGenerateClick = () => {
+    // Generar la historia combinando los valores seleccionados
+    const story = `Un día, ${selectedCharacter} se encontró en ${selectedLocation} cuando ocurrió ${selectedEvent}.`;
+    
+    // Navegar a StoryPage pasando la historia generada
+    navigate("/story", { state: { story } });
+  };
+
+  return (
+    <div>
+      <h1>Generador de Historias</h1>
+      <CharacterSelector selected={selectedCharacter} onSelect={setSelectedCharacter} />
+      <LocationSelector selected={selectedLocation} onSelect={setSelectedLocation} />
+      <EventSelector selected={selectedEvent} onSelect={setSelectedEvent} />
+      <button onClick={handleGenerateClick}>Generar Historia</button>
+    </div>
+  );
+};
+
+export default Home;
+
+**¿Qué hace este fragmento?**
+La interfaz de usuario (UI) se estructura jerárquicamente, similar a un árbol de componentes
+**¿Cómo cumple la habilidad?**
+Cada componente puede tener hijos, lo que permite organizar la aplicación de manera modular y escalable.
+**¿Por qué es la mejor forma?**
+ Al organizar los componentes como un árbol, se facilita la reutilización y la extensión de la aplicación, ya que cada componente se puede modificar de manera aislada sin afectar a los demás.
+- **Gestionar el estado**: Controlar el estado de los personajes, lugares y eventos generados aleatoriamente.
+
+
 - **Controlar eventos del usuario**: Capturar eventos para generar una nueva historia aleatoria al hacer clic en un botón.
 
 interface Props {
