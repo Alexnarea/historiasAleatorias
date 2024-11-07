@@ -1,8 +1,8 @@
 import React from "react";
 
 interface CharacterSelectorProps {
-  selected: string; // Propiedad para el personaje seleccionado
-  onSelect: React.Dispatch<React.SetStateAction<string>>; // Función para manejar selección
+  selected: string; 
+  onSelect: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const CharacterSelector: React.FC<CharacterSelectorProps> = ({ selected, onSelect }) => {

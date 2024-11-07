@@ -1,8 +1,8 @@
 import React from "react";
 
 interface EventSelectorProps {
-  selected: string; // Evento seleccionado actualmente
-  onSelect: React.Dispatch<React.SetStateAction<string>>; // Función para actualizar el evento seleccionado
+  selected: string; 
+  onSelect: React.Dispatch<React.SetStateAction<string>>; 
 }
 
 const EventSelector: React.FC<EventSelectorProps> = ({ selected, onSelect }) => {

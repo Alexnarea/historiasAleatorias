@@ -18,16 +18,12 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="footer-related">
                     <h3>Integrantes</h3>
-                    <ul>
-                        <li>Alexis Narea</li>
-                        <li>Edisson Mendez</li>
-                        <li>Alejandra Medranda</li>
-                    </ul>
+                    <p>Alexis Narea - Edisson Mendez - Alejandra Medranda</p>
                 </div>
                 <div className="footer-social">
                     <h3>Redes Sociales</h3>
                     <div className="social-icons">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/alexis.narea.5/" target="_blank" rel="noopener noreferrer">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
