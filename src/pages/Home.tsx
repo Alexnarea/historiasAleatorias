@@ -12,13 +12,11 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   const handleGenerateClick = () => {
-    // Aquí podrías redirigir a la página de historia con los valores seleccionados
+   
+    const story = `${selectedCharacter} se encuentra en ${selectedLocation} y ${selectedEvent}.`;
+    
     navigate("/story", {
-      state: {
-        character: selectedCharacter,
-        location: selectedLocation,
-        event: selectedEvent,
-      },
+      state: { story },
     });
   };
 
