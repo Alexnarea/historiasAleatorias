@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StoryPage from "./pages/StoryPage";
-import Footer from "./Components/Footer";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 
 const App: React.FC = () => {

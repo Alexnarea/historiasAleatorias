@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import CharacterSelector from "../Components/CharacterSelector";
-import LocationSelector from "../Components/LocationSelector";
-import EventSelector from "../Components/EventSelector";
+import CharacterSelector from "../components/CharacterSelector";
+import LocationSelector from "../components/LocationSelector";
+import EventSelector from "../components/EventSelector";
 import "./Home.css"; 
 
 const Home: React.FC = () => {
